@@ -1,0 +1,5 @@
+# Redirect root to /leaderboard
+/ /leaderboard 200
+
+# Handle missing pages
+/* /404.html 404
