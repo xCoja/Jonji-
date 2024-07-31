@@ -17,13 +17,13 @@ body, html {
 /* Header and nav*/
 .header {
     display: flex;
-    justify-content: center; /* Center the nav */
+    justify-content: center; 
     align-items: center;
     padding: 0px;
     background-color: #101010;
     position: fixed;
     width: 100%;
-    height: 100px; /* Fixed height for the header */
+    height: 100px; 
     top: 0;
     left: 0;
     z-index: 1000;
@@ -158,7 +158,7 @@ body, html {
 
 .giving-away .bolded {
     font-weight: 1000;
-    color: #f5bf4c; /* This ensures the color matches your yellow/orange */
+    color: #f5bf4c; 
 }
 
 .pocetak {
@@ -207,7 +207,7 @@ body, html {
 .second-card {
     position: relative;
     animation: pumpAndGlow 3s infinite;
-    border-radius: 15px; /* Make sure the border radius matches */
+    border-radius: 15px; 
 }
 
 
@@ -215,7 +215,7 @@ body, html {
 .second-card {
     position: relative;
     animation: pumpAndGlow 3s infinite;
-    border-radius: 15px; /* Make sure the border radius matches */
+    border-radius: 15px; 
 }
 
 
@@ -233,7 +233,7 @@ body, html {
 
 .card-header .badge {
     position: absolute;
-    top: -20px; /* Adjust this value to control how much the badge is outside the card */
+    top: -20px; 
     left: 50%;
     transform: translateX(-50%);
     background: #101010;
@@ -266,7 +266,7 @@ body, html {
 
 
 .card {
-    background: #181818; /* Base background color */
+    background: #181818; 
     border-radius: 0px;
     padding: 20px;
     margin: 10px;
@@ -275,7 +275,7 @@ body, html {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 2;
-    overflow: hidden; /* Ensures pseudo-elements are clipped within the border */
+    overflow: hidden; 
 }
 
 
@@ -543,22 +543,22 @@ body, html {
     margin-right: 10px;
     font-weight: bold;
     width: 40px; 
-    display: inline-block; /* Ensure it's treated as a block for fixed width */
+    display: inline-block; 
 }
 
 .name {
-    display: inline-block; /* Ensure it's treated as a block for fixed width */
-    width: 100px; /* Adjust the width as needed */
-    white-space: nowrap; /* Prevents text from wrapping to the next line */
-    overflow: hidden; /* Ensures overflowing text is hidden */
-    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflowed text */
+    display: inline-block; 
+    width: 100px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
     text-align: left;
 }
 
 .leaderboard-row {
     background: #181818;
     transition: transform 0.3s ease;
-    margin-bottom: 50px; /* Add space between rows */
+    margin-bottom: 50px; 
 }
 
 .leaderboard-row:last-child {
@@ -597,7 +597,7 @@ body, html {
 }
 
 .cell .name {
-    width: 150px; /* Fixed width for names */
+    width: 150px; 
 }
 .ldb-border {
     background-color: black;
@@ -639,7 +639,7 @@ body, html {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-    z-index: 0; /* Ensure bubbles are behind content */
+    z-index: 0; 
 }
 
 .bubble {
@@ -680,7 +680,7 @@ body, html {
     max-width: 600px;
     height: 400px;
     position: relative;
-    border: 1px solid #444; /* Adjust the color to match your design */
+    border: 1px solid #444;
     width: 100%;
     margin: 10px 0;
 }
@@ -948,7 +948,7 @@ body, html {
     }
 
     .cell .name {
-        width: 137px; /* Fixed width for names */
+        width: 137px; 
     }
     .diamond-icon {
         max-width: 35px;
@@ -1013,13 +1013,13 @@ body, html {
 }
 
 .participate-content a {
-    text-decoration: none; /* Remove the underline */
-    color: #f17c78; /* Set a color that matches your theme */
+    text-decoration: none; 
+    color: #f17c78; 
     z-index: 2;
 }
 
 .participate-content a:hover {
-    color: #ec0e0e; /* Change color on hover */
+    color: #ec0e0e; 
     z-index: 2;
 }
 
@@ -1121,11 +1121,11 @@ body, html {
     .header {
         
         width: 100%;
-        height: 80px; /* Fixed height for the header */
+        height: 80px; 
         
     }
     .logo img {
-        height: 80px; /* Adjust this value to your desired height */
+        height: 80px; 
         width: auto;
         
     }
@@ -1156,7 +1156,7 @@ body, html {
        display: none;
     }
     .cell .name {
-        width: 80px; /* Fixed width for names */
+        width: 80px; 
     }
     .wagered {
         width: 80px;
@@ -1267,8 +1267,8 @@ body, html {
 }
 
 .youtube-video-card a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit the color from the parent */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .youtube-video-thumbnail {
@@ -1297,12 +1297,14 @@ body, html {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none; 
+    transition: 0.3s ease;
+    margin-top: 25px;
 }
 .youtube-channel-link:hover{
     background: #1e1e1e;
     color: red;
     transition: 0.3s ease;
-    font-weight: 400;
+    
 }
 
 .youtube-channel-link i {
