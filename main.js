@@ -1,7 +1,7 @@
 // main.js
 function countdown() {
     
-    var countDownDate = new Date("Jul 27, 2024 23:12:00").getTime();
+    var countDownDate = new Date("August 17, 2024 4:00 PM").getTime();
 
     
     var x = setInterval(function() {
