@@ -1427,6 +1427,11 @@ body, html {
     border-radius: 10px;
 }
 
+abbr {
+    text-decoration: none;
+    list-style: none;
+    cursor: default;
+}
 
 
 .youtube-video-title {
