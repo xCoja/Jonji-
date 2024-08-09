@@ -657,7 +657,24 @@ body, html {
     flex: 1;
     align-items: center;
     justify-content: center;
+    display: flex;
+    
 }
+
+.header-cell {
+    cursor: default;
+    transition: 0.3s ease;
+}
+
+.header-text {
+    transition: 0.3s ease;
+}
+
+.header-text:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease;
+}
+
 
 .rank {
     margin-right: 10px;
@@ -1079,7 +1096,7 @@ body, html {
 
 @media (max-width: 375px){
     
-        
+    
 
         @keyframes pump {
             0%, 100% {
@@ -1404,10 +1421,13 @@ body, html {
 }
 
 .youtube-video-thumbnail {
+    object-fit: cover; /* Ensures the image covers the entire area */
     width: 100%;
+    height: 110px; /* Adjust this as needed for your layout */
     border-radius: 10px;
-    margin-bottom: 5px;
 }
+
+
 
 .youtube-video-title {
     font-size: 14px;

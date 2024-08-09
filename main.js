@@ -70,13 +70,14 @@ function displayYouTubeVideos(videos) {
         videoCard.className = 'youtube-video-card';
         videoCard.innerHTML = `
             <a href="${video.link}" target="_blank">
-                <img src="${video.thumbnail.replace('hqdefault', 'maxresdefault')}" alt="${video.title}" class="youtube-video-thumbnail">
+                <img src="${video.thumbnail}" alt="${video.title}" class="youtube-video-thumbnail">
                 <div class="youtube-video-title">${video.title}</div>
             </a>
         `;
         youtubeVideosContainer.appendChild(videoCard);
     });
 }
+
 
 window.onload = function() {
     countdown();
