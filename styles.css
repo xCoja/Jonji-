@@ -589,7 +589,7 @@ body, html {
 
 .time-value {
     font-size: 30px;
-    color: #4f9eed;
+    color: #e7d90b;
     font-weight: bold;
     font-family: "Montserrat"
 }
@@ -610,9 +610,9 @@ body, html {
 }
 
 .show-winners {
-    background: #056bbe ;
+    background: transparent;
     color: white;
-    border: 2px solid #056bbe ;
+    border: 2px solid #e7d90b;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -624,7 +624,7 @@ body, html {
 
 .show-winners:hover {
     background: #1e1e1e;
-    border: 2px solid #056bbe ;
+    border: 2px solid #e7d90b;
     color: white;
     transform: scale(1.1);
     transition: 0.3s ease;
@@ -1310,6 +1310,19 @@ body, html {
     
 }
 
+.disclaimer h1 {
+    margin-left: 15px;
+    font-size: 23px;
+    
+}
+
+.disclaimer p {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+
 .contact {
     
     text-align: center;
@@ -1485,7 +1498,7 @@ abbr {
     color: #ccc;
     padding: 40px 20px;
     width: 100%;
-    border-top: 1px solid rgb(226, 167, 5);
+    border-top: 1px solid rgb(197, 196, 196);
 }
 
 .footer-container {
@@ -1501,6 +1514,7 @@ abbr {
     flex: 1;
     min-width: 200px;
     margin: 10px;
+    
     
 }
 
@@ -1553,7 +1567,26 @@ abbr {
     vertical-align: middle;
 }
 
+.copy-cc {
+    text-align: center;
+    font-size: 14px;
+    color: #3b4248;
+    margin-bottom: -20px;
+    margin-top: 50px;
+}
 
+.gamble-aware {
+    font-size: 14px;
+    color:#767777;
+    background-color: #111111;
+    padding: 16px 32px;
+    border: 1px solid rgb(155, 152, 152);
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
 
 .footer-column p {
     font-size: 14px;
