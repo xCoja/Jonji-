@@ -1,29 +1,28 @@
 // main.js
 function countdown() {
-    
-    var countDownDate = new Date("August 17, 2024 4:00 PM").getTime();
+    // Calculate the target countdown date, 14 days from now at 4:00 PM UTC
+    var now = new Date();
+    var countDownDate = new Date(Date.UTC(
+        now.getUTCFullYear(), 
+        now.getUTCMonth(), 
+        now.getUTCDate() + 14, // 14 days from now
+        16, 0, 0 // 16:00 hours (4:00 PM) UTC
+    ));
 
-    
     var x = setInterval(function() {
-        
         var now = new Date().getTime();
+        var distance = countDownDate.getTime() - now;
 
-        
-        var distance = countDownDate - now;
-
-        
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-       
         document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;
         document.getElementById("minutes").innerHTML = minutes;
         document.getElementById("seconds").innerHTML = seconds;
 
-       
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("days").innerHTML = "0";
@@ -51,6 +50,27 @@ function createBubbles() {
         bubblesContainer.appendChild(bubble);
     }
 }
+// Show Winners Popup
+const showWinnersButton = document.querySelector('.show-winners');
+const popupOverlayWinners = document.getElementById('popup-overlay-winners');
+const popupCloseWinners = document.getElementById('popup-close-winners');
+
+showWinnersButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    popupOverlayWinners.style.display = 'flex';
+});
+
+popupCloseWinners.addEventListener('click', (event) => {
+    event.stopPropagation();
+    popupOverlayWinners.style.display = 'none';
+});
+
+popupOverlayWinners.addEventListener('click', (event) => {
+    if (event.target === popupOverlayWinners) {
+        popupOverlayWinners.style.display = 'none';
+    }
+});
+
 
 const YOUTUBE_RSS_FEED = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCxElbn4HsMP9hYoM_dYjX2g'; 
 const RSS2JSON_API_URL = 'https://api.rss2json.com/v1/api.json?rss_url=';
