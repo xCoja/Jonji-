@@ -1,15 +1,15 @@
 function countdown() {
-    // Get the current UTC time
-    var now = new Date().getTime();
+    // Set the start time to yesterday at 4:00 PM CET, converted to UTC
+    var startTimeUTC = Date.UTC(2024, 7, 17, 14, 0, 0); // Adjusted to UTC: 2024-08-17 14:00:00 UTC
 
-    // Calculate the target date: 13 days, 3 hours, and 5 minutes from now
-    var countDownDate = now + (13 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000) + (3 * 60 * 1000); // 13 days, 3 hours, 5 minutes in milliseconds
+    // Calculate the end time: 14 days after the start time
+    var countDownDate = startTimeUTC + (14 * 24 * 60 * 60 * 1000); // 14 days in milliseconds
 
     var x = setInterval(function() {
-        // Get the current time again
+        // Get the current time in UTC
         var now = new Date().getTime();
 
-        // Calculate the distance between now and the countdown date
+        // Calculate the remaining time
         var distance = countDownDate - now;
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -17,7 +17,7 @@ function countdown() {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result
+        // Update the countdown display
         document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;
         document.getElementById("minutes").innerHTML = minutes;
@@ -35,6 +35,8 @@ function countdown() {
 }
 
 countdown();
+
+
 
 
 
