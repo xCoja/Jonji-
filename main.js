@@ -1,28 +1,29 @@
-// main.js
 function countdown() {
-    // Calculate the target countdown date, 14 days from now at 4:00 PM UTC
-    var now = new Date();
-    var countDownDate = new Date(Date.UTC(
-        now.getUTCFullYear(), 
-        now.getUTCMonth(), 
-        now.getUTCDate() + 14, // 14 days from now
-        16, 0, 0 // 16:00 hours (4:00 PM) UTC
-    ));
+    // Get the current UTC time
+    var now = new Date().getTime();
+
+    // Calculate the target date: 13 days, 3 hours, and 5 minutes from now
+    var countDownDate = now + (13 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000) + (3 * 60 * 1000); // 13 days, 3 hours, 5 minutes in milliseconds
 
     var x = setInterval(function() {
+        // Get the current time again
         var now = new Date().getTime();
-        var distance = countDownDate.getTime() - now;
+
+        // Calculate the distance between now and the countdown date
+        var distance = countDownDate - now;
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        // Display the result
         document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;
         document.getElementById("minutes").innerHTML = minutes;
         document.getElementById("seconds").innerHTML = seconds;
 
+        // If the countdown is over, stop the timer
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("days").innerHTML = "0";
@@ -32,6 +33,10 @@ function countdown() {
         }
     }, 1000);
 }
+
+countdown();
+
+
 
 function createBubbles() {
     const bubblesContainer = document.querySelector('.bubbles-container');
