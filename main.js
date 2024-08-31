@@ -1,6 +1,6 @@
 function countdown() {
     // Set the start time to yesterday at 4:00 PM CET, converted to UTC
-    var startTimeUTC = Date.UTC(2024, 7, 17, 14, 0, 0); // Adjusted to UTC: 2024-08-17 14:00:00 UTC
+    var startTimeUTC = Date.UTC(2024, 7, 31, 15, 0, 0); // Adjusted to UTC: 2024-08-17 14:00:00 UTC
 
     // Calculate the end time: 14 days after the start time
     var countDownDate = startTimeUTC + (14 * 24 * 60 * 60 * 1000); // 14 days in milliseconds
@@ -58,9 +58,12 @@ function createBubbles() {
     }
 }
 // Show Winners Popup
+// Show Winners Popup
 const showWinnersButton = document.querySelector('.show-winners');
 const popupOverlayWinners = document.getElementById('popup-overlay-winners');
 const popupCloseWinners = document.getElementById('popup-close-winners');
+const paginationButtons = document.querySelectorAll('.pagination-button');
+const pages = document.querySelectorAll('.winners-leaderboard.page');
 
 showWinnersButton.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -77,6 +80,27 @@ popupOverlayWinners.addEventListener('click', (event) => {
         popupOverlayWinners.style.display = 'none';
     }
 });
+
+// Pagination functionality
+paginationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const page = button.getAttribute('data-page');
+
+        // Hide all pages and show the selected page
+        pages.forEach(p => {
+            if (p.getAttribute('data-page') === page) {
+                p.style.display = 'block';
+            } else {
+                p.style.display = 'none';
+            }
+        });
+
+        // Update active state on pagination buttons
+        paginationButtons.forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+    });
+});
+
 
 
 const YOUTUBE_RSS_FEED = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCxElbn4HsMP9hYoM_dYjX2g'; 
