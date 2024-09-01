@@ -9,7 +9,7 @@ body, html {
     font-weight: 400;
     font-style: normal;
     background: #101010;
-    background-image: url(img/backgroundimg.jpg);
+    background-image: url(img/backgroundimg2.png);
     background-position: center;
     color: white;
     position: relative;
@@ -1695,6 +1695,7 @@ abbr {
     background: #181818;
     border-radius: 10px;
     max-width: 600px;
+    height: auto;
     padding: 20px;
     padding-bottom: 50px;
     border: 1px solid #444;
@@ -1773,7 +1774,7 @@ abbr {
 .winners-leader-amount {
     font-size: 16px;
     color: #fff;
-    background: #101010;
+    background: #1d1d1d;
     padding: 2px 10px;
     border-radius: 5px;
 }
@@ -1784,7 +1785,7 @@ abbr {
     font-weight: bold;
     color: #f0af23;
     margin-top: 5px;
-    background: #101010;
+    background: #1d1d1d;
     padding: 2px 10px;
     border-radius: 5px;
     text-shadow: 0 0 6px #ffba59;
@@ -1803,14 +1804,39 @@ abbr {
 
 /* Specific Styling for 1st, 2nd, and 3rd */
 .winners-first-card {
-    background: rgba(255, 238, 3, 0.8);
+    background: rgb(12, 12, 12);
+    border: 2px solid yellow;
 }
 
 .winners-second-card {
-    background: rgba(245, 243, 243, 0.8)
+    background: rgb(15, 15, 15);
+    border: 2px solid white;
 }
 
 .winners-third-card {
-    background: rgb(94, 65, 2);
+    background: rgb(15, 15, 15);
+    border: 2px solid rgb(94, 50, 1);
 }
 
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 0 5px;
+    font-weight: bold;
+    border: 2px solid orange;
+    border-radius: 5px;
+    color: orange;
+    
+}
+
+.nav-item.active {
+    background-color: orange;
+    color: white;
+}

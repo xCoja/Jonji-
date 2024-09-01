@@ -177,6 +177,56 @@ window.onload = function() {
         }
     });
 
+
+
+    
+    document.getElementById('nav1').addEventListener('click', function() {
+        var set1 = document.getElementById('set1');
+        var set2 = document.getElementById('set2');
+        var title = document.querySelector('.winners-title');
+        
+        set1.style.display = 'block';
+        set2.style.display = 'none';
+        title.innerHTML = '<span style="color: orange;">Leaderboard</span> - previous winners <span style="color: orange;"> 2024-08-31</span>';
+        
+        document.getElementById('nav1').classList.add('active');
+        document.getElementById('nav2').classList.remove('active');
+    });
+    
+    document.getElementById('nav2').addEventListener('click', function() {
+        var set1 = document.getElementById('set1');
+        var set2 = document.getElementById('set2');
+        var title = document.querySelector('.winners-title');
+        
+        set1.style.display = 'none';
+        set2.style.display = 'block';
+        title.innerHTML = '<span style="color: orange;">Leaderboard</span> - previous winners <span style="color: orange;"> 2024-08-17</span>';
+        
+        document.getElementById('nav2').classList.add('active');
+        document.getElementById('nav1').classList.remove('active');
+    });
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     // How to Claim Prize Popup
     const howToClaimButton = document.querySelector('.how-to-claim-prize');
     const popupOverlayClaim = document.getElementById('popup-overlay-claim');
