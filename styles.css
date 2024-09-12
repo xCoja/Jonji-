@@ -9,7 +9,7 @@ body, html {
     font-weight: 400;
     font-style: normal;
     background: #101010;
-    background-image: url(img/backgroundimg2.png);
+    background-image: url(img/backgroundimg.jpg);
     background-position: center;
     color: white;
     position: relative;
@@ -1499,6 +1499,7 @@ abbr {
     padding: 40px 20px;
     width: 100%;
     border-top: 1px solid rgb(197, 196, 196);
+    box-sizing: border-box;
 }
 
 .footer-container {
@@ -1508,8 +1509,8 @@ abbr {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
-
 .footer-column {
     flex: 1;
     min-width: 200px;
